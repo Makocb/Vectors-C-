@@ -7,12 +7,12 @@ struct arr {
 	T m[N];
 };
 
-//Вспомогательный шаблон
+//Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ С€Р°Р±Р»РѕРЅ
 template<int n1, int n2, typename T1, typename T2 > auto sum(const arr<T1, n1>& a, const arr<T2, n2>& b) {
 	return sum1(a, b, a.m[0] + b.m[0]);
 	}
 
-//Сумма векторов
+//РЎСѓРјРјР° РІРµРєС‚РѕСЂРѕРІ
 template<int n1, int n2, typename T1, typename T2,typename T3 > arr<T3, ((n1 >= n2) ? n1 : n2)> sum1(const arr<T1, n1>& a, const arr<T2, n2>& b,T3 x)
 {
 	int i=0;
@@ -48,7 +48,7 @@ template<int n1, int n2, typename T1, typename T2,typename T3 > arr<T3, ((n1 >= 
 
 }
 
-//Разность векторов
+//Р Р°Р·РЅРѕСЃС‚СЊ РІРµРєС‚РѕСЂРѕРІ
 template<int n1, int n2, typename T1, typename T2 > auto dif(const arr<T1, n1>& a, const arr<T2, n2>& b)
 {
 	const int n = ((n1 >= n2) ? n1 : n2);
@@ -60,7 +60,7 @@ template<int n1, int n2, typename T1, typename T2 > auto dif(const arr<T1, n1>& 
 	return sum1(a, bSub, a.m[0] + b.m[0]);
 }
 
-//Скалярное произведение векторов
+//РЎРєР°Р»СЏСЂРЅРѕРµ РїСЂРѕРёР·РІРµРґРµРЅРёРµ РІРµРєС‚РѕСЂРѕРІ
 template<int n1, int n2, typename T1, typename T2 > auto prd(const arr<T1, n1>& a, const arr<T2, n2>& b) {
 	return prd1(a, b, a.m[0] + b.m[0]);
 }
